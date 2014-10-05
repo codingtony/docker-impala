@@ -19,7 +19,7 @@ It is also perfect for the road warrior that do not have a connection to its clu
 Running in a Docker makes it less resource intensive than running on a classic VM.
 
 
-The image is quite big, might take a while to download the first time.
+The image is quite big (1.5GB). It might take a while to download the first time.
 
 
 Ports
@@ -82,7 +82,7 @@ Of course, if you already have impala-shell installed on your machine, you can s
 impala-shell -i localhost
 ```
 
-But why not using a docker container to do the queries? That way, you won't have to install all the hadoop software on your host!
+But why not using a docker container to do the queries? That way, you won't have to install all the Hadoop software on your host!
 ```
 docker run --rm -ti --link impala:impala-server codingtony/impala impala-shell -i impala-server
 ```
@@ -140,12 +140,13 @@ drwxr-xr-x   - hdfs supergroup          0 2014-10-05 02:12 /user
 Pretty cool!
 
 
-Now here's how to put file from your host to HDFS that run in the container
+Now here's how to put file from your host into the HDFS that runs in the "impala" container
+
 There is at least two ways to do it.
 
 ### Using the container stdin
 
-You push the data into docker's stdin, and you indicate to adoop fs -put to read from stdin using "-" and specifing the destination file.
+You push the data into docker's stdin, and you indicate to ``hadoop fs -put`` to read from stdin using "-" and you specify the destination file.
 
 Here's how it works :
 ```
