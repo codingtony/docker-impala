@@ -1,0 +1,59 @@
+<configuration>
+  <property>
+    <name>dfs.client.read.shortcircuit</name>
+    <value>true</value>
+</property>
+
+<property>
+    <name>dfs.domain.socket.path</name>
+    <value>/var/run/hdfs-sockets/dn</value>
+</property>
+
+
+ <property>
+   <name>dfs.replication</name>
+   <value>1</value>
+ </property>
+ <property>
+   <name>dfs.namenode.name.dir</name>
+   <value>file:/var/lib/hadoop-hdfs/cache/hdfs/dfs/name</value>
+ </property>
+ 
+ <property>
+   <name>dfs.client.use.legacy.blockreader.local</name>
+   <value>false</value>
+</property>
+
+<property>
+   <name>dfs.datanode.data.dir.perm</name>
+   <value>750</value>
+</property>
+
+<property>
+   <name>dfs.block.local-path-access.user</name>
+   <value>impala</value>
+</property>
+
+<property>
+    <name>dfs.client.file-block-storage-locations.timeout.millis</name>
+    <value>10000</value>
+</property>
+<property>
+  <name>dfs.datanode.hdfs-blocks-metadata.enabled</name>
+  <value>true</value>
+</property> 
+ <property>
+   <name>dfs.datanode.data.dir</name>
+   <value>file:/data/dn</value>
+ </property>
+<!--
+ <property>
+   <name>fs.checkpoint.dir</name>
+   <value>file:/var/data/hadoop/hdfs/snn</value>
+ </property>
+ <property>
+   <name>fs.checkpoint.edits.dir</name>
+   <value>file:/var/data/hadoop/hdfs/snn</value>
+ </property>
+-->
+</configuration>

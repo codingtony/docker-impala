@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $# -le 1 ]]; then
+echo "Prepare Hadoop script require at least 2 args, the first being the hadoop host you linked to"
+exit 1
+fi
+
+HDFS_HOST=$1
+shift
+sed -i "s/__HOSTNAME__/${HDFS_HOST}/" /etc/hadoop/conf/core-site.xml  &&  $@

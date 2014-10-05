@@ -1,0 +1,11 @@
+
+<configuration>
+       <property>
+               <name>fs.default.name</name>
+               <value>hdfs://__HOSTNAME__:9000</value>
+       </property>
+<property>
+   <name>dfs.client.read.shortcircuit</name>
+   <value>true</value>
+  </property>       
+</configuration>
