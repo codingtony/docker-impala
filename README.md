@@ -86,14 +86,17 @@ It will run as a daemon, exposing the ports
 docker run -d --name "impala" -p 9000:9000 -p 50010:50010 -p 50020:50020 -p 50070:50070 -p 50075:50075 -p 21000:21000 -p 21050:21050 -p 25000:25000 -p 25010:25010 -p 25020:25020 codingtony/impala
 ```
 
-### Use docker to query your Impala server
+### Query your Impala server
 
+#### Using local installation
 
-Of course, if you already have impala-shell installed on your machine, you can simply connect to Impala using the interactive shell by doing :
+If you already have impala-shell installed on your machine, you can simply connect to Impala using the interactive shell by doing :
 
 ```
 impala-shell -i localhost
 ```
+
+#### Using the Docker image
 
 But why not using a docker container to do the queries? That way, you won't have to install all the Hadoop software on your host!
 ```
@@ -127,7 +130,7 @@ Query: drop table test
 **It works !**
 
 
-## Putting file in HDFS
+## HDFS Operations
 
 Now the fun begins, you will be able to add some files to HDFS!
 
@@ -150,12 +153,12 @@ drwxrwxrwx   - hdfs supergroup          0 2014-10-05 02:12 /tmp
 drwxr-xr-x   - hdfs supergroup          0 2014-10-05 02:12 /user
 ```
 
-Pretty cool!
+**Pretty cool!**
 
 
 Now here's how to put file from your host into the HDFS that runs in the "impala" container
 
-There is at least two ways to do it.
+There is at least two ways to do it :
 
 ### Using the container stdin
 
