@@ -60,7 +60,7 @@ At the end this will drop you in a shell and you will be able to play with the i
 This will map the ports of your machine to the port in the container
 
 ```
-docker run --rm  -ti  -P codingtony/impala /start-bash.sh
+docker run --rm  -ti  -p 9000:9000 -p 50010:50010 -p 50020:50020 -p 50070:50070 -p 50075:50075 -p 21000:21000 -p 21050:21050 -p 25000:25000 -p 25010:25010 -p 25020:25020 codingtony/impala /start-bash.sh
 ```
 
 Then you should be able to point your browser to http://localhost:25000 to access the Impala server page.
@@ -70,7 +70,7 @@ Then you should be able to point your browser to http://localhost:25000 to acces
 ## Create a named container called "impala" 
 It will run as a daemon, exposing the ports
 ```
-docker run -d --name "impala" -P codingtony/impala
+docker run -d --name "impala" -p 9000:9000 -p 50010:50010 -p 50020:50020 -p 50070:50070 -p 50075:50075 -p 21000:21000 -p 21050:21050 -p 25000:25000 -p 25010:25010 -p 25020:25020 codingtony/impala
 ```
 
 ### Use docker to query your new impala daemon.
