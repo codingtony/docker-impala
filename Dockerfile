@@ -3,7 +3,7 @@ MAINTAINER tony.bussieres@ticksmith.com
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install hadoop-hdfs-namenode hadoop-hdfs-datanode -y
-RUN apt-get install impala impala-server impala-shell impala-catalog impala-catalog -y
+RUN apt-get install impala impala-server impala-shell impala-catalog impala-state-store -y
 
 RUN mkdir /var/run/hdfs-sockets/ ||:
 RUN chown hdfs.hadoop /var/run/hdfs-sockets/
