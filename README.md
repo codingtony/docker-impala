@@ -143,7 +143,7 @@ Pretty cool!
 Now here's how to put file from your host to HDFS that run in the container
 There is at least two ways to do it.
 
-### Using the container stdin :
+### Using the container stdin
 
 You push the data into docker's stdin, and you indicate to adoop fs -put to read from stdin using "-" and specifing the destination file.
 
