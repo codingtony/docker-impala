@@ -40,7 +40,7 @@ A couple for HDFS, and others for Impala.
 | 25010 | Impala State HTTP |
 | 25020 | Impala Catalog HTTP |
 
-Volumes
+Important directories
 ---
 
 | path | description
