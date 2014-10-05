@@ -5,6 +5,22 @@ This Dockerfile runs a [Cloudera Impala 1.4](http://impala.io/) server on a sing
 
 This image is based on [codingtony/cdh5-base](https://github.com/codingtony/docker/tree/master/cdh5-base). Which is essentially CDH5 on Ubuntu 12.04 precise.
 
+The image is available on [Docker Hub Registry](https://registry.hub.docker.com/). 
+
+Pull if from the repository
+```
+docker pull codingtony/impala
+```
+
+Or build the image using the Dockerfile in this repository
+```
+git clone https://github.com/codingtony/docker-impala.git
+cd docker-impala
+docker build -t codingtony/impala .
+```
+The image is quite big (1.5GB). It might take a while to download the first time.
+
+
 ##Features
 
 It runs a single node cluster with a datanode and a namenode running on the same machine.
@@ -17,9 +33,6 @@ It's great for developpers that want to test their queries before running in pro
 It is also perfect for the road warrior that do not have a connection to its cluster.
 
 Running in a Docker makes it less resource intensive than running on a classic VM.
-
-
-The image is quite big (1.5GB). It might take a while to download the first time.
 
 
 Ports
